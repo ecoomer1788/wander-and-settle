@@ -1,11 +1,64 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Wander & Settle</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Wander & Settle helps you explore destinations and plan a move abroad.">
+  <title>Wander & Settle | Plan Your Life Abroad</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-    <h1>Wander & Settle</h1>
-    <p>Your journey abroad starts here.</p>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-current="page">Wander &amp; Settle</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-menu">Menu <span aria-hidden="true">☰</span></button>
+      <nav id="main-menu" class="site-nav" aria-label="Main menu">
+        <ul>
+          <li><a href="#home" aria-current="page">Home</a></li>
+          <li><a href="#destinations">Destinations</a></li>
+          <li><a href="#moving-guide">Moving Guide</a></li>
+          <li><a href="#tools">Tools</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section id="home" class="hero" aria-labelledby="hero-title">
+      <div class="container hero-content">
+        <p class="eyebrow">Your next chapter starts here</p>
+        <h1 id="hero-title">Dreaming of a Life Abroad?</h1>
+        <p>Explore destinations. Plan your move. Find your next home.</p>
+        <a class="button" href="#destinations">Explore Destinations</a>
+      </div>
+    </section>
+    <section id="destinations" class="section container" aria-labelledby="destinations-title">
+      <h2 id="destinations-title">Explore destinations</h2>
+      <p class="section-intro">Discover places to consider for your next adventure.</p>
+      <div class="destination-grid">
+        <article class="destination-card"><div class="destination-art germany" role="img" aria-label="Illustration of mountains and a village in Germany"><span aria-hidden="true">🏔️</span></div><h3>Germany</h3><p>Explore historic towns, vibrant cities, and everyday life in Germany.</p></article>
+        <article class="destination-card"><div class="destination-art netherlands" role="img" aria-label="Illustration representing canals and bicycles in the Netherlands"><span aria-hidden="true">🚲</span></div><h3>Netherlands</h3><p>Discover cycling-friendly communities and life in the Netherlands.</p></article>
+        <article class="destination-card"><div class="destination-art canada" role="img" aria-label="Illustration representing Canada's forests and mountains"><span aria-hidden="true">🍁</span></div><h3>Canada</h3><p>Learn about Canada's regions and possibilities for settling abroad.</p></article>
+      </div>
+    </section>
+    <section id="moving-guide" class="section section-soft" aria-labelledby="guide-title">
+      <div class="container"><h2 id="guide-title">Plan your move</h2><p class="section-intro">Start with the essentials for a well-prepared move.</p>
+        <div class="guide-grid">
+          <article class="guide-card"><h3>Budgeting &amp; Housing</h3><p>Think through moving costs, monthly expenses, and finding a place to live.</p></article>
+          <article class="guide-card"><h3>Jobs &amp; Visas</h3><p>Research employment opportunities and the paperwork you may need.</p></article>
+          <article class="guide-card"><h3>Language &amp; Culture</h3><p>Prepare for new languages, customs, and daily routines.</p></article>
+          <article class="guide-card"><h3>Moving with Family</h3><p>Consider schools, childcare, healthcare, and family needs.</p></article>
+          <article class="guide-card"><h3>Preparation</h3><p>Organize important documents and make a realistic moving timeline.</p></article>
+        </div>
+      </div>
+    </section>
+    <section id="tools" class="section container" aria-labelledby="tools-title"><h2 id="tools-title">Interactive planning tools</h2><p class="section-intro">These features are planned for future course modules.</p>
+      <div class="tools-grid"><article class="tool-card"><h3>Moving Checklist</h3><p>Keep track of the steps before your move.</p><span class="coming-soon">Coming later</span></article><article class="tool-card"><h3>Compare Destinations</h3><p>Compare places based on your priorities.</p><span class="coming-soon">Coming later</span></article><article class="tool-card"><h3>Destination Fit Quiz</h3><p>Explore destinations that may match your goals.</p><span class="coming-soon">Coming later</span></article></div>
+    </section>
+    <section id="about" class="section section-soft about" aria-labelledby="about-title"><div class="container"><h2 id="about-title">About Wander &amp; Settle</h2><p>Wander &amp; Settle is a student website project designed to make the idea of moving abroad feel more approachable. As the website grows, it will bring destination research, moving resources, and planning tools together in one place.</p></div></section>
+  </main>
+  <footer class="site-footer"><div class="container"><p>Wander &amp; Settle · <a href="#about">About</a> · <a href="mailto:hello@example.com" class="sample-contact" aria-label="Contact information coming soon">Contact coming soon</a></p><p class="footer-note">A website development course project.</p></div></footer>
 </body>
 </html>

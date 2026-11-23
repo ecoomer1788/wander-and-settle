@@ -1,16 +1,1 @@
-// Accessible mobile navigation: keep the button's expanded state in sync.
-const menuButton = document.querySelector('.menu-toggle');
-const navigation = document.querySelector('#main-menu');
-if (menuButton && navigation) {
-  menuButton.addEventListener('click', () => {
-    const expanded = menuButton.getAttribute('aria-expanded') === 'true';
-    menuButton.setAttribute('aria-expanded', String(!expanded));
-    navigation.classList.toggle('open', !expanded);
-  });
-  navigation.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      navigation.classList.remove('open');
-      menuButton.setAttribute('aria-expanded', 'false');
-    });
-  });
-}
+document.addEventListener('DOMContentLoaded',()=>{const form=document.querySelector('#destination-form');if(form){form.addEventListener('submit',e=>{e.preventDefault();const lifestyle=document.querySelector('#lifestyle').value,priority=document.querySelector('#priority').value,error=document.querySelector('#quiz-error'),result=document.querySelector('#quiz-result');result.hidden=true;if(!lifestyle||!priority){error.textContent='Please answer both questions before viewing your match.';return;}error.textContent='';const scores={germany:0,netherlands:0,canada:0};scores[lifestyle]++;scores[priority]++;const match=Object.keys(scores).sort((a,b)=>scores[b]-scores[a])[0];const names={germany:'Germany',netherlands:'the Netherlands',canada:'Canada'};result.textContent='Your starting point: '+names[match]+'. This is a preference-based suggestion only. Explore official resources before making decisions.';result.hidden=false;});}const boxes=[...document.querySelectorAll('.checklist input')],progress=document.querySelector('#check-progress');if(boxes.length){const update=()=>progress.textContent=boxes.filter(x=>x.checked).length+' of '+boxes.length+' steps completed';boxes.forEach(x=>x.addEventListener('change',update));document.querySelector('#reset-checklist').addEventListener('click',()=>{boxes.forEach(x=>x.checked=false);update();});}});
